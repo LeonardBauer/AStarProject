@@ -1,0 +1,16 @@
+\chapter{Nachteile A*-Algorithmus}
+
+\section{Komplexität}
+Die Laufzeit des A*-Algorithmus kann exponentiell mit der Größe des Suchraums wachsen, insbesondere wenn der Suchraum sehr groß oder unübersichtlich ist. Dies kann zu längeren Berechnungszeiten führen, insbesondere wenn der Graph stark verzweigt ist.
+
+\section{Speicherbedarf}
+A* benötigt Speicherplatz, um die bereits besuchten Knoten und diejenigen, die noch besucht werden müssen, zu verfolgen. Dies kann bei großen Suchräumen zu einem erheblichen Speicherbedarf führen, insbesondere wenn der Algorithmus viele Knoten im Speicher behalten muss.
+
+\section{Heuristikabhängigkeit}
+Die Effizienz des A*-Algorithmus hängt stark von der Qualität der Heuristik ab. Eine schlechte Heuristik kann dazu führen, dass der Algorithmus unnötig viele Knoten erkundet oder sogar zu einer suboptimalen Lösung führt.
+
+ 
+ \section{Verzerrung (Bias)}
+ Wenn die Heuristik nicht konsistent ist, kann der A*-Algorithmus zu einer Verzerrung führen, was bedeutet, dass er die kürzeste oder optimale Lösung möglicherweise nicht findet. Dies kann insbesondere bei ungleichmäßig verteilten Kosten im Graphen auftreten.
+
+\section{Nicht für dynamische Umgebungen geeignet} A* ist nicht gut geeignet für dynamische Umgebungen, in denen sich die Kosten oder Hindernisse während der Suche ändern können. Da A* nur einmal eine Schätzung der Gesamtkosten berechnet, kann sich dies als ineffizient erweisen, wenn sich die Umgebung während der Suche ändert.

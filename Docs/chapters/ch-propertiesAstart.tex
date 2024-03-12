@@ -1,0 +1,21 @@
+\chapter{Eigenschaften des A*-Algorithmus}
+A* hat viele eigenschaften, wegen denen er weit verbreitet ist.
+
+
+\section{Vollständigkeit}
+
+A* wird immer eine Lösung finden falls eine existiert, und ween der Graph endlich ist und es keine unendlichen kosten gibt.
+
+\section{Optimalität}
+
+A* garentiert den kürzesten Weg zu dem Ziel zu finden, wenn bestimmte Kondition erfüllt sind, zum beispiel ein zuverlässiges Heuristisches verfahren zu haben, das niemals die Kosten überschaätzt.
+
+
+\section{Effizienz}
+Auch wenn A* keine Garantie für die Zeitkomplexität im schlimmsten Fall bietet, schneidet es in der Praxis aufgrund seiner heuristischen Führung und der Auslese weniger vielversprechender Pfade oft gut ab.
+
+\section{Zulässigkeit}
+A* requires an admissible heuristic to ensure optimality. An admissible heuristic never overestimates the cost to reach the goal, meaning the actual cost to reach the goal will never be greater than the estimated cost provided by the heuristic.
+
+\section{Speicher Benutzung}
+A* erfordert in der Regel die Speicherung aller besuchten Knoten, was in Umgebungen mit begrenztem Speicherplatz oder bei großen Graphen ein Problem darstellen kann. Verschiedene Optimierungen, wie die Verwendung einer Prioritätswarteschlange, können dieses Problem jedoch entschärfen.

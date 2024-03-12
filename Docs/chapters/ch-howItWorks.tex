@@ -1,0 +1,41 @@
+\chapter{Funktionsweise des A*-Algorithmus}
+
+Der A*-Algorithmus durchsucht einen Graphen, um den kürzesten Pfad zwischen einem Startknoten $s$ und einem Zielknoten $t$ zu finden. Dabei verwendet er zwei Hauptprinzipien:
+
+\section{Suchalgorithmen}
+\subsection{Informierte Suche}
+
+
+Der Algorithmus nutzt eine Heuristik $h(n)$ um den Abstand zwischen dem aktuellen Knoten $n$ und dem Zielknoten $t$ abzuschätzen. Diese Heuristik lenkt die Suche in Richtung des Ziels und ermöglicht es dem Algorithmus, effizienter zu sein als uninformierte Suchalgorithmen. Der A*-Algorithmus basiert auf einem Gewichteten Graphen.
+
+\subsection{Best-First-Search}
+
+Der Algorithmus wählt immer den Knoten $n$ mit der niedrigsten Gesamtbewertung $f(n)$ als nächsten zu bearbeitenden Knoten. Die Gesamtbewertung setzt sich aus zwei Teilen zusammen:
+
+\begin{itemize}
+    \item $g(n)$: Die tatsächlichen Kosten, um vom Startknoten $s$ zum aktuellen Knoten $n$ zu gelangen.
+    \item $h(n)$: Die geschätzten Kosten, um vom aktuellen Knoten $n$ zum Zielknoten $t$ zu gelangen.
+\end{itemize}
+
+
+\newpage
+\section{Schrittabfolge}
+
+\begin{enumerate}
+    \item Der Algorithmus initialisiert den Startknoten $s$ mit einer Gesamtbewertung von $f(s) = g(s) + h(s)$.
+    \item Der Algorithmus fügt den Startknoten $s$ in eine Open-Set-Liste  ein.
+    \item Solange die Open-Set-Liste nicht leer ist:
+    \begin{itemize}
+        \item Der Algorithmus entfernt den Knoten $n$ mit der niedrigsten Gesamtbewertung $f(n)$ aus der Open-Set-Liste und fügt ihn in eine Closed-Set-Liste ein.
+        \item Für alle Nachbarknoten $m$ des aktuellen Knoten $n$:
+        \begin{itemize}
+            \item Berechne die tatsächlichen Kosten $g(m)$ um vom Startknoten $s$ zum Nachbarknoten $m$ zu gelangen.
+            \item Berechne die geschätzten Kosten $h(m)$ um vom Nachbarknoten $m$ zum Zielknoten $t$ zu gelangen.
+            \item Berechne die Gesamtbewertung $f(m) = g(m) + h(m)$ des Nachbarknotens $m$.
+            \item Wenn der Nachbarknoten $m$ nicht in der Open-Set-Liste $OPEN$ ist, füge ihn mit seiner Gesamtbewertung $f(m)$ in die Open-Set-Liste $OPEN$ ein.
+        \end{itemize}
+    \end{itemize}
+
+\end{enumerate}
+
+
